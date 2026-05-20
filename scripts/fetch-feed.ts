@@ -19,12 +19,6 @@ const SANITIZE_OPTIONS: sanitize.IOptions = {
     "em", "strong", "br",
   ],
   allowedAttributes: {},
-  transformTags: {
-    a: (tagName: string, attribs: sanitize.Attributes) => ({
-      tagName: "span",
-      attribs: { class: "link" },
-    }),
-  },
 };
 
 async function fetchFeed(): Promise<void> {

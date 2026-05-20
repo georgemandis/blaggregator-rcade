@@ -1,0 +1,41 @@
+{
+  "buildDate": "2026-05-20",
+  "postCount": 5,
+  "posts": [
+    {
+      "title": "Why I Rewrote My Static Site Generator in Rust",
+      "author": "Alex Chen",
+      "date": "2026-05-20",
+      "content": "<p>After years of using a Node.js-based static site generator, I finally took the plunge and rewrote the whole thing in Rust. Was it worth it? Honestly, kind of.</p><p>The build times went from 3 seconds to 40 milliseconds, which feels incredible even though 3 seconds was never actually a problem. But the real win was learning Rust's ownership model. Once you internalize the borrow checker, it changes how you think about data flow in every language.</p><p>The hardest part was string handling. In JavaScript, strings are just strings. In Rust, you have <code>&amp;str</code> and <code>String</code> and <code>OsStr</code> and <code>CStr</code> and suddenly you're questioning everything you thought you knew about text.</p><p>Would I recommend this path? If you want to learn Rust, absolutely. Pick a project you already understand deeply so the only new variable is the language. If you just want a fast site generator, use Hugo.</p>",
+      "url": "https://example.com/rust-static-site"
+    },
+    {
+      "title": "A Week of Pair Programming: What I Learned",
+      "author": "Priya Sharma",
+      "date": "2026-05-19",
+      "content": "<p>I spent all of last week pair programming with different people every day. Here's what surprised me.</p><h2>Day 1: The Setup Tax</h2><p>Half the session was spent getting my partner's environment to match mine. We now have a shared dotfiles repo. This alone was worth the week.</p><h2>Day 2: Thinking Out Loud</h2><p>My partner narrated every thought while coding. At first it was distracting, but by the end I realized I'd learned more about their problem-solving approach in two hours than I had in months of code review.</p><h2>Day 3: The Navigator's Advantage</h2><p>When I wasn't typing, I caught architectural issues that the driver was too focused to see. The navigator role is underrated.</p><h2>Day 4: Fatigue</h2><p>Four days in and I was exhausted. Pair programming is intense. We took more breaks and it helped a lot.</p><h2>Day 5: The Payoff</h2><p>We shipped a feature that had been stuck for weeks. Two brains really are better than one when the problem is genuinely hard.</p>",
+      "url": "https://example.com/pair-programming-week"
+    },
+    {
+      "title": "Exploring WebGPU for Creative Coding",
+      "author": "Jordan Okafor",
+      "date": "2026-05-19",
+      "content": "<p>I've been experimenting with WebGPU as a replacement for WebGL in my creative coding projects. The API is verbose but the mental model is much cleaner.</p><p>The biggest difference is explicit resource management. In WebGL you bind things to global state and hope you remember to unbind them. In WebGPU you create pipelines and bind groups that make dependencies clear.</p><p>Here's what a simple triangle looks like:</p><pre><code>const pipeline = device.createRenderPipeline({\n  layout: 'auto',\n  vertex: { module: shaderModule, entryPoint: 'vs_main' },\n  fragment: { module: shaderModule, entryPoint: 'fs_main', targets: [{ format }] },\n});</code></pre><p>More code than WebGL for hello-world, but the abstractions scale much better. My particle system went from 500 lines of spaghetti GL state to 200 lines of clear pipeline setup.</p><p>Browser support is still spotty. Chrome is solid, Firefox is behind a flag, and Safari just landed it. But for creative coding where you control the environment, it's ready now.</p>",
+      "url": "https://example.com/webgpu-creative-coding"
+    },
+    {
+      "title": "The Joy of Reading Code You Wrote Five Years Ago",
+      "author": "Sam Nakamura",
+      "date": "2026-05-18",
+      "content": "<p>I found an old project on a backup drive from 2021. It was a command-line tool for managing my reading list, written in Python. I braced myself for cringe, but what I found was surprisingly pleasant.</p><p>Sure, there were some questionable choices. A 400-line function. Variable names like <code>tmp2</code>. A comment that just said <code># fix this later</code> (it was never fixed). But the overall structure was sound and the tool still worked.</p><p>What struck me most was how much my style has changed. I used to write very imperative code with lots of loops and mutations. Now I lean functional. Neither is wrong, but seeing the contrast was like reading an old journal entry.</p><p>The best part? I found a clever solution to a problem I've been struggling with in a current project. Past me had already solved it. I just forgot.</p><p>Take-away: keep your old code. Don't delete repos out of embarrassment. Future you might need them.</p>",
+      "url": "https://example.com/reading-old-code"
+    },
+    {
+      "title": "Building a Tiny Debugger",
+      "author": "Morgan Ellis",
+      "date": "2026-05-18",
+      "content": "<p>I wanted to understand how debuggers work, so I built one. A very small one. For a very small language.</p><p>The target is a toy stack-based VM with about 15 instructions. The debugger supports breakpoints, single-stepping, and inspecting the stack. That's it.</p><h2>How Breakpoints Work</h2><p>The trick is simple: replace the instruction at the breakpoint address with a special BREAK instruction. When the VM hits it, it pauses and notifies the debugger. The debugger saves the original instruction so it can restore it when you continue.</p><h2>Single Stepping</h2><p>Even simpler. Set a flag that makes the VM pause after every instruction. The debugger just keeps saying \"execute one more\" until you tell it to continue.</p><h2>The Hard Part</h2><p>Source mapping. My toy language compiles to bytecode, and mapping bytecode addresses back to source lines requires carrying metadata through compilation. This is where most of the complexity lives in real debuggers too.</p><p>The whole thing is about 300 lines of C. It's the most educational 300 lines I've written in a while.</p>",
+      "url": "https://example.com/tiny-debugger"
+    }
+  ]
+}

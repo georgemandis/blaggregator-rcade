@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 336px;
+  height: 262px;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  flex-shrink: 0;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  font-size: 7px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.article-item {
+  padding: 3px 8px;
+  cursor: default;
+}
+
+.article-item .title {
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.article-item .meta {
+  font-size: 7px;
+  line-height: 1.3;
+}
+
+.article-body {
+  padding: 6px 8px;
+  font-size: 9px;
+  line-height: 1.4;
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: 100%;
+}
+
+.article-body::-webkit-scrollbar {
+  display: none;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+  font-size: 10px;
+  margin: 6px 0 3px;
+}
+
+.article-body p {
+  margin: 4px 0;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 4px 0;
+  padding-left: 14px;
+}
+
+.article-body pre {
+  font-size: 7px;
+  padding: 4px;
+  margin: 4px 0;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.article-body code {
+  font-size: 8px;
+}
+
+.article-body blockquote {
+  padding-left: 6px;
+  margin: 4px 0;
+  font-style: italic;
+}
+
+.scroll-indicator {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.scroll-indicator .thumb {
+  position: absolute;
+  width: 100%;
+  border-radius: 1px;
+  min-height: 8px;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.reader-header {
+  flex-shrink: 0;
+  padding: 6px 8px;
+}
+
+.reader-header .title {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.reader-header .meta {
+  font-size: 7px;
+  margin-top: 2px;
+}

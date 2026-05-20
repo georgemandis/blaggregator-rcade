@@ -1,0 +1,225 @@
+/* === MAGAZINE THEME (default) === */
+
+.theme-magazine {
+  background: #f5f0e8;
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.theme-magazine .header {
+  border-bottom: 1px solid #ccc;
+}
+
+.theme-magazine .header .edition-title {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+}
+
+.theme-magazine .header .edition-meta {
+  font-size: 7px;
+  color: #999;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.theme-magazine .article-item {
+  border-left: 3px solid transparent;
+}
+
+.theme-magazine .article-item.selected {
+  background: #fff;
+  border-left: 3px solid #c44;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.theme-magazine .article-item .title {
+  color: #333;
+}
+
+.theme-magazine .article-item .meta {
+  color: #888;
+  font-style: italic;
+}
+
+.theme-magazine .footer {
+  color: #aaa;
+}
+
+.theme-magazine .article-body pre {
+  background: #eee8dd;
+}
+
+.theme-magazine .article-body blockquote {
+  border-left: 2px solid #c44;
+  color: #555;
+}
+
+.theme-magazine .scroll-indicator .thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.theme-magazine .reader-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.theme-magazine .reader-header .meta {
+  color: #888;
+  font-style: italic;
+}
+
+/* === NEWSPAPER THEME === */
+
+.theme-newspaper {
+  background: #1a1a2e;
+  color: #eee;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.theme-newspaper .header {
+  border-top: 3px solid #888;
+  border-bottom: 3px solid #888;
+  padding: 4px 8px;
+}
+
+.theme-newspaper .header .edition-title {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.theme-newspaper .header .edition-meta {
+  font-size: 7px;
+  color: #888;
+}
+
+.theme-newspaper .article-item .title {
+  color: #7cb3ff;
+}
+
+.theme-newspaper .article-item.selected {
+  background: rgba(124, 179, 255, 0.1);
+}
+
+.theme-newspaper .article-item.selected .title {
+  color: #fff;
+}
+
+.theme-newspaper .article-item .meta {
+  color: #888;
+}
+
+.theme-newspaper .footer {
+  color: #555;
+}
+
+.theme-newspaper .article-body pre {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.theme-newspaper .article-body blockquote {
+  border-left: 2px solid #7cb3ff;
+  color: #aaa;
+}
+
+.theme-newspaper .scroll-indicator .thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-newspaper .reader-header {
+  border-bottom: 1px solid #333;
+}
+
+.theme-newspaper .reader-header .meta {
+  color: #888;
+}
+
+/* === TERMINAL THEME === */
+
+.theme-terminal {
+  background: #0a0a0a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.theme-terminal .header {
+  border-bottom: 1px solid #030;
+}
+
+.theme-terminal .header .edition-title {
+  font-size: 10px;
+  color: #0a0;
+  text-transform: lowercase;
+}
+
+.theme-terminal .header .edition-meta {
+  font-size: 7px;
+  color: #070;
+}
+
+.theme-terminal .article-item .title {
+  color: #0a0;
+  font-size: 8px;
+}
+
+.theme-terminal .article-item .title::before {
+  content: "  ";
+}
+
+.theme-terminal .article-item.selected {
+  background: #030;
+}
+
+.theme-terminal .article-item.selected .title {
+  color: #0f0;
+}
+
+.theme-terminal .article-item.selected .title::before {
+  content: "> ";
+}
+
+.theme-terminal .article-item .meta {
+  color: #070;
+  font-size: 7px;
+}
+
+.theme-terminal .footer {
+  color: #050;
+}
+
+.theme-terminal .article-body {
+  color: #0a0;
+  font-size: 8px;
+}
+
+.theme-terminal .article-body pre {
+  background: #030;
+  color: #0f0;
+}
+
+.theme-terminal .article-body blockquote {
+  border-left: 2px solid #070;
+  color: #070;
+}
+
+.theme-terminal .scroll-indicator .thumb {
+  background: #070;
+}
+
+.theme-terminal .reader-header {
+  border-bottom: 1px solid #030;
+}
+
+.theme-terminal .reader-header .title {
+  color: #0f0;
+}
+
+.theme-terminal .reader-header .meta {
+  color: #070;
+}

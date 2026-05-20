@@ -1,0 +1,22 @@
+{
+  "$schema": "https://rcade.dev/manifest.schema.json",
+  "name": "recurse-blog-reader",
+  "display_name": "Blaggregator (The Game)",
+  "description": "Read recent blog posts from the Recurse community (on the RCade)",
+  "visibility": "public",
+  "authors": [
+    {
+      "display_name": "George Mandis"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@rcade/input-classic",
+      "version": "1.0.0"
+    },
+    {
+      "name": "@rcade/input-spinners",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "recurse-blog-reader",
+    "private": false,
+    "version": "1.0.0",
+    "description": "Read recent blog posts from the Recurse community (on the RCade)",
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"vite --port 5173 --strictPort\" \"rcade dev http://localhost:5173\"",
+        "build": "vite build",
+        "fetch": "bun run scripts/fetch-feed.ts"
+    },
+    "devDependencies": {
+        "@types/sanitize-html": "^2.16.1",
+        "concurrently": "^9.0.0",
+        "rcade": "^0.0.48",
+        "typescript": "~5.9.3",
+        "vite": "^7.2.4"
+    },
+    "dependencies": {
+        "@rcade/plugin-input-classic": "^0.2.1",
+        "@rcade/plugin-input-spinners": "^0.2.3",
+        "fast-xml-parser": "^5.8.0",
+        "sanitize-html": "^2.17.4"
+    }
+}

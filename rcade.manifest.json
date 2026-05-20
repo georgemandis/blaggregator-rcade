@@ -3,7 +3,7 @@
   "name": "recurse-blog-reader",
   "display_name": "Blaggregator (The Game)",
   "description": "Read recent blog posts from the Recurse community (on the RCade)",
-  "visibility": "public",
+  "visibility": "private",
   "authors": [
     {
       "display_name": "George Mandis"
